@@ -44,9 +44,7 @@ const books = ref([]);
 const fetchBooks = () => {
   axios.get('http://localhost:3000/api/books').then(
     (res) => {
-      console.log(res)
       books.value = res.data;
-      bookInfoBool.value = true;
     },
     (error) => {
       console.log(error);
